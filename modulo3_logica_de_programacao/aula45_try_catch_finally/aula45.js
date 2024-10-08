@@ -17,7 +17,7 @@ function retonaHora(data) {
   
 try {
     const data = new Date('01-01-1970 12:58:12');
-    const hora = retonaHora();
+    const hora = retonaHora(3);
     console.log(hora);
 } catch(e) {
     // Tratar erro
