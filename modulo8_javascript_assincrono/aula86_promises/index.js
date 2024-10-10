@@ -25,7 +25,8 @@ esperaAi('Conexão com o BD', rand(1, 3))
     })
     .then(resposta => {
         console.log(resposta);
-    }).then(() => {
+    })
+    .then(() => {
         console.log('Exibe dados na tela');
     })
     .catch(e => {

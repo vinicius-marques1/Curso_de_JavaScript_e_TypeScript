@@ -17,5 +17,7 @@ class Pessoa {
 
 const p1 = new Pessoa('Luiz', 'Miranda');
 p1.nomeCompleto = 'Luiz Miranda Oliveira';
+
 console.log(p1.nome);
 console.log(p1.sobrenome);
+console.log(p1.nomeCompleto)

@@ -1,3 +1,5 @@
+// Promise.all, Promise.race, Promise.resolve, Promise.reject
+
 function rand(min, max) {
     min *= 1000;
     max *= 1000;

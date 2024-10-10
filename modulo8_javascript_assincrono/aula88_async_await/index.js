@@ -56,7 +56,8 @@ async function executa() {
         console.log(e);
     }
 }
-// executa();
+
+executa();
 
 const teste2 = esperaAi('qlq', 5000);
 console.log(teste2);
