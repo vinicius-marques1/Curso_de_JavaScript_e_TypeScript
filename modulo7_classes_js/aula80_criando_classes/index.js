@@ -20,3 +20,6 @@ Pessoa2.prototype.falar = function() {
 
 const p1 = new Pessoa('Luiz', 'Miranda');
 const p2 = new Pessoa2('Luiz', 'Miranda');
+
+console.log(p1);
+console.log(p2);
