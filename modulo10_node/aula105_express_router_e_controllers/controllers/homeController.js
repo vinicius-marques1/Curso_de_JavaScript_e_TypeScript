@@ -5,9 +5,9 @@ exports.paginaInicial = (req, res) => {
     Outro campo: <input type="text" name="aquioutrocampo">
     <button>Olá mundo</button>
     </form>
-    `);
-  };
-  
-  exports.trataPost = (req, res) => {
-    res.send('Ei, sou sua nova rota de POST.');
-  };
+  `);
+};
+ 
+exports.trataPost = (req, res) => {
+  res.send('Ei, sou sua nova rota de POST.');
+};
