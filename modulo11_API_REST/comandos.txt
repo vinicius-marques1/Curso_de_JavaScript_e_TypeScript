@@ -1,3 +1,7 @@
 npx sequelize migration:create --name=alunos
 
 npx sequelize db:migrate
+
+npx sequelize seed:generate --name criar-usuarios
+
+npx sequelize db:seed:all
