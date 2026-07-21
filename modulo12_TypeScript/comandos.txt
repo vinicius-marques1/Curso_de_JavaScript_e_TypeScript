@@ -1,0 +1,5 @@
+npx @eslint/migrate-config .eslintrc.js -- comando de migração ESLINT
+
+npx tsc -- compilar typescript
+
+npx ts-node <arquivo.ts> -- executar um arquivo direto
