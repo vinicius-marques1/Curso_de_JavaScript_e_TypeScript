@@ -7,7 +7,7 @@ export function createPerson(
     lastName?: string,
 ): {
     firstName: string;
-    lastName?: string;
+    lastName?: string | undefined;
 } {
     return {
         firstName,

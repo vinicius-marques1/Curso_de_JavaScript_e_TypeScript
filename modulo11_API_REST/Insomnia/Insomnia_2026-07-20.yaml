@@ -1,0 +1,417 @@
+type: collection.insomnia.rest/5.0
+schema_version: '5.1'
+name: REST API CursoJS
+meta:
+  id: wrk_1536c2ea9cef42cb9a003f17321a097a
+  created: 1784057082409
+  modified: 1784057479277
+  description: ''
+collection:
+  - name: Home
+    meta:
+      id: fld_0dd8c141a62043199f32c0203e5bad99
+      created: 1784057497427
+      modified: 1784057497427
+      sortKey: -1784057497427
+      description: ''
+    children:
+      - url: '{{ _.base_url }}'
+        name: Index
+        meta:
+          id: req_ab18dfde1550413d969e79e5f681d456
+          created: 1784057213029
+          modified: 1784057896721
+          isPrivate: false
+          description: ''
+          sortKey: -1784057504954
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_fe69e07cbee649639efe7336b2707a92
+      created: 1784146970957
+      modified: 1784146970957
+      sortKey: -1784146970957
+      description: ''
+    children:
+      - url: '{{ _.base_url }}/users'
+        name: Store
+        meta:
+          id: req_e59d6be79c26455fb99a935990f34212
+          created: 1784146975107
+          modified: 1784401419387
+          isPrivate: false
+          description: ''
+          sortKey: -1784146975107
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "TESTE",
+            	"email": "teste@email.com",
+              "password": "595826"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/users'
+        name: Index
+        meta:
+          id: req_03b21e9d93754f32a9b363d933eab6d7
+          created: 1784204360476
+          modified: 1784313853937
+          isPrivate: false
+          description: ''
+          sortKey: -1784204360476
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/users/6'
+        name: Show
+        meta:
+          id: req_c8c2febe41154dd3b2ac0f77af20fce9
+          created: 1784208931547
+          modified: 1784313857510
+          isPrivate: false
+          description: ''
+          sortKey: -1784208931547
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/users'
+        name: Update
+        meta:
+          id: req_2a34d8cc612e4320b9b0c360dbdc2252
+          created: 1784209578750
+          modified: 1784313534059
+          isPrivate: false
+          description: ''
+          sortKey: -1784209578750
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "TESTE AAA"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/users'
+        name: Delete
+        meta:
+          id: req_87b49252a25d4e3eab6c5d69909cf9b4
+          created: 1784211188936
+          modified: 1784237729143
+          isPrivate: false
+          description: ''
+          sortKey: -1784211188936
+        method: DELETE
+        headers:
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tokens
+    meta:
+      id: fld_2bcb8d3aae71421aac978ba2b02d8f7b
+      created: 1784221276774
+      modified: 1784221276774
+      sortKey: -1784221276774
+      description: ''
+    children:
+      - url: '{{ _.base_url }}/tokens'
+        name: Store
+        meta:
+          id: req_b7b59be7a81d4d5cbd01cacba47601f6
+          created: 1784221279541
+          modified: 1784237198110
+          isPrivate: false
+          description: ''
+          sortKey: -1784221279541
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "teste@email.com",
+              "password": "595826"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Alunos
+    meta:
+      id: fld_1a6faad8f59c4af5bf5bd8dc039d9f39
+      created: 1784247336353
+      modified: 1784247336353
+      sortKey: -1784247336353
+      description: ''
+    children:
+      - url: '{{ _.base_url }}/alunos'
+        name: Index
+        meta:
+          id: req_a00934aa20224bc6910a3c40f6092b02
+          created: 1784247518558
+          modified: 1784247550826
+          isPrivate: false
+          description: ''
+          sortKey: -1784247518558
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/alunos'
+        name: Store
+        meta:
+          id: req_51123f984ae849ddb812681edfd55ded
+          created: 1784311678998
+          modified: 1784313745881
+          isPrivate: false
+          description: ''
+          sortKey: -1784311678998
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Anna",
+            	"sobrenome": "silva",
+            	"email": "anna@email.com",
+            	"idade": 28,
+            	"peso": 70,
+            	"altura": 1.70
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/alunos/6'
+        name: Update
+        meta:
+          id: req_eb047476b5784bcba77dd6f523a2626d
+          created: 1784311943699
+          modified: 1784313966803
+          isPrivate: false
+          description: ''
+          sortKey: -1784311943699
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Anna ATUALIZADA"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/alunos/5'
+        name: Show
+        meta:
+          id: req_0caafda2db2b4be0ac5a2b2ccc3a1aa0
+          created: 1784312690350
+          modified: 1784559300833
+          isPrivate: false
+          description: ''
+          sortKey: -1784312690350
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: '{{ _.base_url }}/alunos/6'
+        name: Delete
+        meta:
+          id: req_4464d98b6ae1469cbf013495327f418c
+          created: 1784312741756
+          modified: 1784401443125
+          isPrivate: false
+          description: ''
+          sortKey: -1784312741756
+        method: DELETE
+        headers:
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Fotos
+    meta:
+      id: fld_be7eb3d8ded5465391647b9f99ed4e84
+      created: 1784375887201
+      modified: 1784375887201
+      sortKey: -1784375887201
+      description: ''
+    children:
+      - url: '{{ _.base_url }}/fotos'
+        name: Store
+        meta:
+          id: req_4e5184d9be3b4ff59f0a67e6e63126e6
+          created: 1784375890108
+          modified: 1784558921338
+          isPrivate: false
+          description: ''
+          sortKey: -1784375890108
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: foto
+              value: ''
+              description: ''
+              disabled: false
+              fileName: C:\Users\vinic\Documents\Fotos e videos\Fotos\fotos 024.jpg
+              type: file
+            - name: aluno_id
+              value: '5'
+              description: ''
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: authorization
+            value:
+              Bearer {% response 'body', 'req_b7b59be7a81d4d5cbd01cacba47601f6',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ''
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cf33ae6e055911168378a11c2f19f7efe8cce7f3
+    created: 1784057082415
+    modified: 1784057082415
+  cookies:
+    - id: d8e39194-5c51-4e43-9de4-09750ad38e83
+      key: foo
+      value: bar
+      domain: domain.com
+      path: /
+      secure: false
+      httpOnly: false
+environments:
+  name: Base Environment
+  meta:
+    id: env_cf33ae6e055911168378a11c2f19f7efe8cce7f3
+    created: 1784057082413
+    modified: 1784057082413
+    isPrivate: false
