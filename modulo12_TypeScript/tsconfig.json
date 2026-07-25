@@ -9,7 +9,7 @@
         // See also https://aka.ms/tsconfig/module
         // "module": "nodenext",
         "module": "commonjs",
-        "target": "esnext",
+        "target": "es2019",
         "types": [],
         // For nodejs:
         "lib": ["esnext", "DOM"],
@@ -34,6 +34,10 @@
         // "noPropertyAccessFromIndexSignature": true,
 
         // "allowImportingTsExtensions": true,
+
+        /* Experimental Options */
+        "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+        "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
 
         // Recommended Options
         "strict": true,
